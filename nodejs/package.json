@@ -1,0 +1,17 @@
+{
+  "name": "bing-spell-checker",
+  "version": "0.0.1",
+  "description": "Bing spell check api connector",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "bing",
+    "spell",
+    "check",
+    "api"
+  ],
+  "author": "mustafa ilhan <m.ilhan@emakina.com.tr>",
+  "license": "MIT"
+}
