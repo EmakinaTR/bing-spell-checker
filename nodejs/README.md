@@ -34,5 +34,4 @@ promise.then(function (result) {
 
 TODO
 ----
-- Unit tests
 - Provide a threshold value
