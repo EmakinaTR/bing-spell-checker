@@ -11,7 +11,7 @@ You need an API access key. You can get it from here: [Bing Spell Check API Acce
 
 TODO
 ----
-- Bash
+- ~~Bash~~
 - Java
 - Kotlin
-- Python
+- ~~Python~~
