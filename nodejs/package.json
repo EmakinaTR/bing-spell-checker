@@ -1,7 +1,7 @@
 {
   "name": "bing-spell-checker",
-  "version": "0.0.1",
-  "description": "Bing spell check api connector",
+  "version": "0.1.0",
+  "description": "Bing Spell Check API connector",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
@@ -13,5 +13,10 @@
     "api"
   ],
   "author": "mustafa ilhan <m.ilhan@emakina.com.tr>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/EmakinaTR/bing-spell-checker.git"
+  },
+  "homepage": "https://github.com/EmakinaTR/bing-spell-checker"
 }
