@@ -72,8 +72,10 @@ async function runTests () {
 
   if (failed.length === 0) {
     console.log('Passed all.')
+    process.exit()
   } else {
     console.log('Failed (' + (failed.length) + ') Passed (' + (passed.length) + ').')
+    process.exit(1)
   }
 }
 
