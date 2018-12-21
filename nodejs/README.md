@@ -15,6 +15,8 @@ How to use?
 -----------
 You need an API access key. You can get it from here: [Bing Spell Check API Access](https://azure.microsoft.com/en-us/try/cognitive-services/#lang)
 
+> Reading access key through environment variables are a secure way of accessing secret information. Therefore, you should consider setting access key to environment variables.
+
 ```javascript
 'use strict'
 
