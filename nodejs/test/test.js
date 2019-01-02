@@ -64,7 +64,7 @@ async function test (testCase, text, expected, key) {
 }
 
 async function runTests () {
-  for (let i = 0, ii = scenarios.length; i != ii; i++) {
+  for (let i = 0, ii = scenarios.length; i !== ii; i++) {
     await test(scenarios[i].testCase, scenarios[i].text, scenarios[i].expected, scenarios[i].key)
     // Bing API has a rate limit, therefore we need wait at least 1 second.
     await sleep(1000)
