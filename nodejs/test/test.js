@@ -11,19 +11,19 @@ let scenarios = [
   {
     'testCase': 'empty_key',
     'text': 'Hello',
-    'expected': 'key can not be empty. Please provide a key.',
+    'expected': 'Key can not be empty. Please provide a key.',
     'key': ''
   },
   {
     'testCase': 'empty_text',
     'text': '',
-    'expected': 'text can not be empty. Please provide a text.',
+    'expected': 'Text can not be empty. Please provide a text.',
     'key': process.env.BING_SPELL_CHECK_API_KEY
   },
   {
     'testCase': 'wrong_key',
     'text': 'It workd!',
-    'expected': 'Error on bing-spell-checker: Access denied due to invalid subscription key. Make sure to provide a valid key for an active subscription.',
+    'expected': 'Access denied due to invalid subscription key. Make sure to provide a valid key for an active subscription.',
     'key': 'asd'
   },
   {
@@ -59,7 +59,7 @@ async function test (testCase, text, expected, key) {
   await promise.then(function (result) {
     check(testCase, expected, result)
   }, function (err) {
-    check(testCase, expected, err)
+    check(testCase, expected, err.message)
   })
 }
 

@@ -38,12 +38,12 @@ module.exports.init = function (props) {
 module.exports.check = function (text, lang = 'en-US', mode = 'proof') {
   if (isEmpty(text)) {
     return new Promise((resolve, reject) => {
-      reject('text can not be empty. Please provide a text.')
+      reject(new Error('Text can not be empty. Please provide a text.'))
     })
   }
   if (isEmpty(properties.key)) {
     return new Promise((resolve, reject) => {
-      reject('key can not be empty. Please provide a key.')
+      reject(new Error('Key can not be empty. Please provide a key.'))
     })
   }
 
@@ -79,13 +79,13 @@ module.exports.check = function (text, lang = 'en-US', mode = 'proof') {
         body = JSON.parse(body)
         // console.log(body)
         if (body['statusCode']) {
-          reject('Error on bing-spell-checker: ' + body['message'])
+          reject(new Error(body['message']))
         } else {
           resolve(correctSpellingErrors(text, body))
         }
       })
       response.on('error', function (e) {
-        reject('Error on bing-spell-checker: ' + e.message)
+        reject(new Error(e.message))
       })
     })
     req.write('text=' + text)
